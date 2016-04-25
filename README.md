@@ -1,4 +1,4 @@
-# JsInterviewChallenge
+# Js Interview Challenge
 
 Welcome to the JS code challenge. Below is a set of instructions that you must attempt to complete within 3 days. Good luck :)
 
