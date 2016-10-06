@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app='myApp'>
+    <head>
+        <title>ng-include directives in AngularJS</title>
+        <link href="style.css" rel='stylesheet' type='text/css'>
+        <script src="angular.min.js" type='text/javascript'></script>
+        <script src='controller.js' type='text/javascript'></script>
+    </head>
+    <body ng-controller="myController" >
+
+        <table border='1'>
+            <tr >
+                <th ng-click='sortColumn("userId")' ng-class='sortClass("userId")'>userId</th>
+                <th ng-click='sortColumn("id")' ng-class='sortClass("id")'>id</th>
+                <th ng-click='sortColumn("title")' ng-class='sortClass("title")'>title</th>
+                <th ng-click='sortColumn("body")' ng-class='sortClass("body")'>body</th>
+            </tr>
+            <tr ng-repeat='friend in friends | orderBy:column:reverse'>
+
+                <td width='20%' align='center'>{{friend.userId}}</td>
+                <td width='35%' align='center'>{{friend.id}}</td>
+                <td width='20%' align='center'>{{friend.title}}</td>
+                <td width='25%' align='center'>{{friend.body}}</td>
+            </tr>
+        </table>
+
+    </body>
+</html>
